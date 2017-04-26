@@ -35,4 +35,9 @@
     return [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
 }
 
++(NSData *)base64DecodeStringToData:(NSString *)string
+{
+    return [[NSData alloc]initWithBase64EncodedString:string options:0];
+}
+
 @end

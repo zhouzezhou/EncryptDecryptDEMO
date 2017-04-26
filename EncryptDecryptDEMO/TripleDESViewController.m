@@ -22,9 +22,14 @@
     NSString *myText = @"zhouzezhou is mine";
     NSString *encryptPassword = @"zhouzezhou";
     
-    TripleDESUtils *tripleDESUtils = [[TripleDESUtils alloc] init];
-    NSString *encryptString = [tripleDESUtils encryptUseDES:myText key:encryptPassword];
+//    TripleDESUtils *tripleDESUtils = [[TripleDESUtils alloc] init];
+    
+//    NSString *encryptString = [tripleDESUtils encryptUseDES:myText key:encryptPassword];
+    NSString *encryptString = [TripleDESUtils encrypt:myText withKey:encryptPassword];
     NSLog(@"encryptString : \n%@\n", encryptString);
+    
+    NSString *decryString = [TripleDESUtils decrypt:encryptString withKey:encryptPassword];
+    NSLog(@"decryString : \n%@\n", decryString);
     
     // Do any additional setup after loading the view.
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E9073271EB0686B00D2EF6E /* RSAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9073261EB0686B00D2EF6E /* RSAUtils.m */; };
 		5ED82EDD1EAF871A00BB13A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED82EDC1EAF871A00BB13A1 /* main.m */; };
 		5ED82EE01EAF871B00BB13A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED82EDF1EAF871B00BB13A1 /* AppDelegate.m */; };
 		5ED82EE31EAF871B00BB13A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED82EE21EAF871B00BB13A1 /* ViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E9073251EB0686B00D2EF6E /* RSAUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtils.h; sourceTree = "<group>"; };
+		5E9073261EB0686B00D2EF6E /* RSAUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtils.m; sourceTree = "<group>"; };
 		5ED82ED81EAF871A00BB13A1 /* EncryptDecryptDEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptDecryptDEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED82EDC1EAF871A00BB13A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5ED82EDE1EAF871B00BB13A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				5ED82F331EAF957800BB13A1 /* NSString+MD5.m */,
 				5ED82F351EAF9C5B00BB13A1 /* TripleDESUtils.h */,
 				5ED82F361EAF9C5B00BB13A1 /* TripleDESUtils.m */,
+				5E9073251EB0686B00D2EF6E /* RSAUtils.h */,
+				5E9073261EB0686B00D2EF6E /* RSAUtils.m */,
 			);
 			name = EncryptDecryptUtils;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				5ED82F1F1EAF899F00BB13A1 /* RSAViewController.m in Sources */,
 				5ED82F341EAF957800BB13A1 /* NSString+MD5.m in Sources */,
 				5ED82EDD1EAF871A00BB13A1 /* main.m in Sources */,
+				5E9073271EB0686B00D2EF6E /* RSAUtils.m in Sources */,
 				5ED82F191EAF898800BB13A1 /* DESViewController.m in Sources */,
 				5ED82F131EAF897300BB13A1 /* Base64ViewController.m in Sources */,
 				5ED82F221EAF8C5400BB13A1 /* TripleDESViewController.m in Sources */,
@@ -592,6 +598,7 @@
 				5ED82F071EAF871B00BB13A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5ED82F081EAF871B00BB13A1 /* Build configuration list for PBXNativeTarget "EncryptDecryptDEMOTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +607,7 @@
 				5ED82F0A1EAF871B00BB13A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5ED82F0B1EAF871B00BB13A1 /* Build configuration list for PBXNativeTarget "EncryptDecryptDEMOUITests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +616,7 @@
 				5ED82F0D1EAF871B00BB13A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

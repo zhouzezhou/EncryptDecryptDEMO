@@ -7,6 +7,8 @@
 //
 
 #import "RSAViewController.h"
+#import "RSAUtils.h"
+
 
 @interface RSAViewController ()
 

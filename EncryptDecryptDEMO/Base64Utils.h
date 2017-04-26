@@ -16,5 +16,6 @@
 
 // 解密
 +(NSString *)base64DecodeString:(NSString *)string;
++(NSData *)base64DecodeStringToData:(NSString *)string;
 
 @end

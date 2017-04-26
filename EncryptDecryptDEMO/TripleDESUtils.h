@@ -15,4 +15,8 @@
 
 + (NSData *)DESEncrypt:(NSData *)data WithKey:(NSData *)key iv:(NSData*)iv;
 + (NSData *)bDESEncrypt:(NSData *)data WithKey:(NSString *)key iv:(NSString*) iv;
+
+
++ (NSString*)encrypt:(NSString*)plainText withKey:(NSString*)key;
++ (NSString*)decrypt:(NSString*)encryptText withKey:(NSString*)key;
 @end
