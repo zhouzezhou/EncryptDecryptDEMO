@@ -46,7 +46,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-0w-8fl">
                                 <rect key="frame" x="56" y="462" width="265" height="30"/>
-                                <state key="normal" title="RSA"/>
+                                <state key="normal" title="RSA签名和验签"/>
                                 <connections>
                                     <segue destination="Vn9-2F-pdx" kind="show" id="7Ho-6c-nak"/>
                                 </connections>
