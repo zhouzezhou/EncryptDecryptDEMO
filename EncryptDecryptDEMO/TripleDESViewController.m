@@ -19,19 +19,15 @@
     [super viewDidLoad];
     self.title = @"3DES加解密";
     
-    NSString *myText = @"zhouzezhou is mine";
-    NSString *encryptPassword = @"zhouzezhou";
+    NSString *plainText = @"zhouzezhou123";
+    NSString *key = @"iRWQckmlKmxVdrjMJFfxrtWr";
+    NSString *iv = @"01234567";
     
-//    TripleDESUtils *tripleDESUtils = [[TripleDESUtils alloc] init];
+    NSString *encrypptString = [TripleDESUtils getEncryptWithString:plainText keyString: key ivString: iv];
+    NSString *decryptString = [TripleDESUtils getDecryptWithString:encrypptString keyString: key ivString: iv];
     
-//    NSString *encryptString = [tripleDESUtils encryptUseDES:myText key:encryptPassword];
-    NSString *encryptString = [TripleDESUtils encrypt:myText withKey:encryptPassword];
-    NSLog(@"encryptString : \n%@\n", encryptString);
-    
-    NSString *decryString = [TripleDESUtils decrypt:encryptString withKey:encryptPassword];
-    NSLog(@"decryString : \n%@\n", decryString);
-    
-    // Do any additional setup after loading the view.
+    NSLog(@"3des加密:%@",encrypptString);
+    NSLog(@"3des解密:%@",decryptString);
 }
 
 - (void)didReceiveMemoryWarning {
