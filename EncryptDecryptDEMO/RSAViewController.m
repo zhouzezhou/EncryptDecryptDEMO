@@ -10,7 +10,7 @@
 #import "HBRSAHandler.h"
 
 // 感谢：https://github.com/HustBroventure/iOSRSAHandler
-// 此RSA签名验签来自于以上github
+// 此RSA签名验签加解密代码来自于以上github
 @interface RSAViewController ()
 
 @end
@@ -25,7 +25,6 @@
     
     
     NSString* public_key_string = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC4L/7MhR99+yswtvSr0dKenD/oJUaow2AEJ6OYn2n12Y4H9RIQY2W5Sr/h4iwMzQTpWFNT5y7jjpGY+qYNQOR1GS6bG2GuTMK9W1BwC41y2gd0xwqWV+df2+S9eHqxqOdib/4/+t2JYxLTJvAC5pGPEvt3z8RXmO8mvtlVzBLaZQIDAQAB";
-    
     
     HBRSAHandler* handler = [HBRSAHandler new];
     
@@ -43,25 +42,35 @@
     //需要签名的字符串
     NSString *plainText = @"zhouzezhou";
     // 签名
-    NSString* sig = [handler signString:plainText];
-    NSLog(@"\n\nsig:\n%@\n\n", sig);
-    NSString* sigMd5 = [handler signMD5String:plainText];
-    NSLog(@"\n\nsigMd5:\n%@\n\n", sigMd5);
+//    NSString* sig = [handler signString:plainText];
+//    NSLog(@"\n\nsig:\n%@\n\n", sig);
+//    NSString* sigMd5 = [handler signMD5String:plainText];
+//    NSLog(@"\n\nsigMd5:\n%@\n\n", sigMd5);
     
-    // 验签
-    BOOL isMatch = [handler verifyString:plainText withSign:sig];
-    NSLog(@"\n\nisMatch:\n%d\n\n", isMatch);
-    BOOL isMatchMd5 = [handler verifyMD5String:plainText withSign:sigMd5];
-    NSLog(@"\n\nisMatchMd5:\n%d\n\n", isMatchMd5);
+//    // 验签
+//    BOOL isMatch = [handler verifyString:plainText withSign:sig];
+//    NSLog(@"\n\nisMatch:\n%d\n\n", isMatch);
+//    BOOL isMatchMd5 = [handler verifyMD5String:plainText withSign:sigMd5];
+//    NSLog(@"\n\nisMatchMd5:\n%d\n\n", isMatchMd5);
     
-    // 加密
-    NSString* enString = [handler encryptWithPublicKey:plainText];
-    NSLog(@"\n\nenString:\n%@\n\n",enString);
+//    // 加密
+//    NSString* enString = [handler encryptWithPublicKey:plainText];
+//    NSLog(@"\n\nenString:\n %@",enString);
+    
+    NSString* enPrivateString = [handler encryptWithPrivateKey:plainText];
+    NSLog(@"\n\nenPrivateString:\n %@",enPrivateString);
     
     // 解密
-    NSString* deString = [handler decryptWithPrivatecKey:enString];
-    NSLog(@"\n\ndeString:\n%@\n\n",deString);
+    //去除掉首尾的空白字符和换行字符
+//    str = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+//    str = [str stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+//    str = [str stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     
+//    NSString* dePrivateString = [handler decryptWithPrivateKey:enString];
+//    NSLog(@"\n\ndeString:\n%@",deString);
+    
+    NSString* dePublicString = [handler decryptWithPublicKey:enPrivateString];
+    NSLog(@"\n\ndePublicString:\n%@",dePublicString);    
 }
 
 - (void)didReceiveMemoryWarning {

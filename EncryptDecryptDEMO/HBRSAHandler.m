@@ -262,13 +262,52 @@ typedef enum {
     return nil;
 }
 
-- (NSString *) decryptWithPrivatecKey:(NSString*)content
+// RSA加密——私钥 Zzz新加
+- (NSString *) encryptWithPrivateKey:(NSString*)content
 {
     if (!_rsa_pri) {
         NSLog(@"please import private key first");
         return nil;
-    }    int status;
+    }
+    int status;
+    int length  = (int)[content length];
+    unsigned char input[length + 1];
+    bzero(input, length + 1);
+    int i = 0;
+    for (; i < length; i++)
+    {
+        input[i] = [content characterAtIndex:i];
+    }
     
+    NSInteger  flen = [self getBlockSizeWithRSA_PADDING_TYPE:PADDING andRSA:_rsa_pri];
+    
+    char *encData = (char*)malloc(flen);
+    bzero(encData, flen);
+    status = RSA_private_encrypt(length, (unsigned char*)input, (unsigned char*)encData, _rsa_pri, PADDING);
+    
+    if (status){
+        NSData *returnData = [NSData dataWithBytes:encData length:status];
+        free(encData);
+        encData = NULL;
+        
+        //NSString *ret = [returnData base64EncodedString];
+        NSString *ret = [returnData base64EncodedStringWithOptions: NSDataBase64Encoding64CharacterLineLength];
+        return ret;
+    }
+    
+    free(encData);
+    encData = NULL;
+    
+    return nil;
+}
+
+- (NSString *) decryptWithPrivateKey:(NSString*)content
+{
+    if (!_rsa_pri) {
+        NSLog(@"please import private key first");
+        return nil;
+    }
+    int status;
         //NSData *data = [content base64DecodedData];
     NSData *data = [[NSData alloc]initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
     int length = (int)[data length];
@@ -287,6 +326,39 @@ typedef enum {
         
         return decryptString;
         }
+    
+    free(decData);
+    decData = NULL;
+    
+    return nil;
+}
+
+// RSA解密——公钥 Zzz新加
+- (NSString *) decryptWithPublicKey:(NSString*)content
+{
+    if (!_rsa_pub) {
+        NSLog(@"please import public key first");
+        return nil;
+    }
+    int status;
+    //NSData *data = [content base64DecodedData];
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    int length = (int)[data length];
+    
+    NSInteger flen = [self getBlockSizeWithRSA_PADDING_TYPE:PADDING andRSA:_rsa_pub];
+    char *decData = (char*)malloc(flen);
+    bzero(decData, flen);
+    
+    status = RSA_public_decrypt(length, (unsigned char*)[data bytes], (unsigned char*)decData, _rsa_pub, PADDING);
+    
+    if (status)
+    {
+        NSMutableString *decryptString = [[NSMutableString alloc] initWithBytes:decData length:strlen(decData) encoding:NSASCIIStringEncoding];
+        free(decData);
+        decData = NULL;
+        
+        return decryptString;
+    }
     
     free(decData);
     decData = NULL;
