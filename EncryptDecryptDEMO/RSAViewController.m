@@ -69,8 +69,14 @@
 //    NSString* dePrivateString = [handler decryptWithPrivateKey:enString];
 //    NSLog(@"\n\ndeString:\n%@",deString);
     
-    NSString* dePublicString = [handler decryptWithPublicKey:enPrivateString];
-    NSLog(@"\n\ndePublicString:\n%@",dePublicString);    
+    NSString *tempString = @"RH+imgTWqNxXIMWXfHUzvAX45eQyfTgvPHJ4eo8ZMZLORIl+CPe7yQayPTkAbIGfujDTRWWDyfCV2wg/YitGmOOYcsm+BwWGIQUbcpomc5onFOPYi+0PPRBGssqHqWfW0/SAo5POVDK8eXy0mI9CsFn/KXNFeNX+27D1NeliRjAfjWn9KgzECEhXtAqFPMFCkkm36LvxRIhyhVS+ZHEDgPKBbU+6HsAcGknbKjTkhkjMAjlfCPhV4bEXlO7xYjzFUvcfi1uET45YjVKg/L38jdZCWGiryuN3RbDmUIePl+yiCmmXNl0uPrph58vfn2LmVLe+DgP3uVfMmoPI7iYz19/OykuozAihsZQCHeBj9BLvtAC9wPxbQd6j3DukCuVEpYq6SFTQrw2/0pCP/DdKkfO1IdsQBN+3KV9LqedUWNDUkxfn6PxLfPfcipGav1HA6/zldK+B8Ep9hI2pvkaX4RD5xSQO4i+hlixM3eU8UTD6+HdoDGrhJXGqRh8lx9L+5+rhVJPjTUKY2+RepZqNa7laqwbi5tdrqYMHcb/TKvA6KAdsWncUzdT7fZ1C0jyae38R7eHXzJzujvgzwm/x+7QXtSFwn6fP+Rq6lR62z1zb3N18GwW3o+PnyFAK/DUm38gXOuWo5zZsqhz4os8AopFwsDWuvOlOwM5AW2RiXDI=";
+    
+    
+    NSString* dePublicStringtemp = [handler decryptWithPublicKey:tempString];
+    NSLog(@"\n\ndePublicString:\n%@",dePublicStringtemp);
+    
+//    NSString* dePublicString = [handler decryptWithPublicKey:enPrivateString];
+//    NSLog(@"\n\ndePublicString:\n%@",dePublicString);    
 }
 
 - (void)didReceiveMemoryWarning {
