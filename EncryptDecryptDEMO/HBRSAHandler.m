@@ -196,7 +196,8 @@ typedef enum {
     }
     const char *message = [string cStringUsingEncoding:NSUTF8StringEncoding];
         //int messageLength = (int)strlen(message);
-    unsigned char *sig = (unsigned char *)malloc(256);
+//    unsigned char *sig = (unsigned char *)malloc(256);
+    unsigned char *sig = (unsigned char *)malloc(1024);
     unsigned int sig_len;
     
     unsigned char digest[MD5_DIGEST_LENGTH];

@@ -116,7 +116,21 @@
                     <view key="view" contentMode="scaleToFill" id="FWb-bm-xuL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-L0-YT7">
+                                <rect key="frame" x="35" y="328" width="304" height="30"/>
+                                <state key="normal" title="signMD5"/>
+                                <connections>
+                                    <action selector="clickButotn:" destination="Vn9-2F-pdx" eventType="touchUpInside" id="qnm-rd-cJJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nf4-L0-YT7" secondAttribute="trailing" constant="20" id="4I1-5B-ulV"/>
+                            <constraint firstItem="nf4-L0-YT7" firstAttribute="centerX" secondItem="FWb-bm-xuL" secondAttribute="centerX" id="cR0-YZ-Jqe"/>
+                            <constraint firstItem="nf4-L0-YT7" firstAttribute="centerY" secondItem="FWb-bm-xuL" secondAttribute="centerY" id="cUT-Ba-MDx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCi-eb-deM" userLabel="First Responder" sceneMemberID="firstResponder"/>

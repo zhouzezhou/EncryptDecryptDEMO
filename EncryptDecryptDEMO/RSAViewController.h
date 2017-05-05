@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HBRSAHandler.h"
 
 @interface RSAViewController : UIViewController
+
+//@property (nonatomic, strong) HBRSAHandler *rsaHandler;
 
 @end
