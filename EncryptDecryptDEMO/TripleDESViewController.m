@@ -21,17 +21,6 @@
     [super viewDidLoad];
     self.title = @"3DES加解密";
     
-    // 普通字符串加解密
-//    NSString *plainText = @"zhouzezhou123";
-//    NSString *key = @"iRWQckmlKmxVdrjMJFfxrtWr";
-//    NSString *iv = @"01234567";
-//    
-//    NSString *encrypptString = [TripleDESUtils getEncryptWithString:plainText keyString: key ivString: iv];
-//    NSString *decryptString = [TripleDESUtils getDecryptWithString:encrypptString keyString: key ivString: iv];
-//    
-//    NSLog(@"3des加密:%@",encrypptString);
-//    NSLog(@"3des解密:%@",decryptString);
-
     // 二维码16进制字符串加解密
 //    NSString *plainText = @"1CB77A269D9C2DE70819A71998466FFB";
     NSString *plainText = @"2471905179304";
@@ -51,7 +40,6 @@
 }
 
 //普通字符串转换为十六进制的。
-
 - (NSString *)hexStringFromString:(NSString *)string{
     NSData *myD = [string dataUsingEncoding:NSUTF8StringEncoding];
     Byte *bytes = (Byte *)[myD bytes];
@@ -104,15 +92,5 @@
     }
     return data;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

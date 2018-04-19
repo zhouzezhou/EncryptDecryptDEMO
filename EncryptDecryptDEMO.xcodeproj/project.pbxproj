@@ -195,11 +195,11 @@
 		5E9076061EB1BC5A00D2EF6E /* RSAUtils */ = {
 			isa = PBXGroup;
 			children = (
+				5E90765B1EB1BC9E00D2EF6E /* HBRSAHandler.h */,
+				5E90765C1EB1BC9E00D2EF6E /* HBRSAHandler.m */,
 				5E9076071EB1BC7D00D2EF6E /* openssl */,
 				5E9076571EB1BC9000D2EF6E /* libcrypto.a */,
 				5E9076581EB1BC9000D2EF6E /* libssl.a */,
-				5E90765B1EB1BC9E00D2EF6E /* HBRSAHandler.h */,
-				5E90765C1EB1BC9E00D2EF6E /* HBRSAHandler.m */,
 			);
 			name = RSAUtils;
 			sourceTree = "<group>";
@@ -286,6 +286,125 @@
 			path = openssl;
 			sourceTree = "<group>";
 		};
+		5EC3FF8C2088ECD300424AF0 /* DESUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F261EAF8FBC00BB13A1 /* DESUtils.h */,
+				5ED82F271EAF8FBC00BB13A1 /* DESUtils.m */,
+			);
+			name = DESUtils;
+			sourceTree = "<group>";
+		};
+		5EC3FF8D2088ECDF00424AF0 /* TripleDESUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F351EAF9C5B00BB13A1 /* TripleDESUtils.h */,
+				5ED82F361EAF9C5B00BB13A1 /* TripleDESUtils.m */,
+			);
+			name = TripleDESUtils;
+			sourceTree = "<group>";
+		};
+		5EC3FF8E2088ED1D00424AF0 /* AESUtils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AESUtils;
+			sourceTree = "<group>";
+		};
+		5EC3FF8F2088ED4800424AF0 /* OtherUtils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OtherUtils;
+			sourceTree = "<group>";
+		};
+		5EC3FF902088ED5600424AF0 /* Base64Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F291EAF8FD600BB13A1 /* Base64Utils.h */,
+				5ED82F2A1EAF8FD600BB13A1 /* Base64Utils.m */,
+			);
+			name = Base64Utils;
+			sourceTree = "<group>";
+		};
+		5EC3FF912088ED6200424AF0 /* MD5Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F321EAF957800BB13A1 /* NSString+MD5.h */,
+				5ED82F331EAF957800BB13A1 /* NSString+MD5.m */,
+			);
+			name = MD5Utils;
+			sourceTree = "<group>";
+		};
+		5EC3FF922088EDB700424AF0 /* MD5Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F0E1EAF894E00BB13A1 /* MD5ViewController.h */,
+				5ED82F0F1EAF894E00BB13A1 /* MD5ViewController.m */,
+			);
+			name = MD5Utils;
+			sourceTree = "<group>";
+		};
+		5EC3FF932088EE0800424AF0 /* Base64Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F111EAF897300BB13A1 /* Base64ViewController.h */,
+				5ED82F121EAF897300BB13A1 /* Base64ViewController.m */,
+			);
+			name = Base64Utils;
+			sourceTree = "<group>";
+		};
+		5EC3FF942088EE1000424AF0 /* AESUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F141EAF898100BB13A1 /* AESViewController.h */,
+				5ED82F151EAF898100BB13A1 /* AESViewController.m */,
+			);
+			name = AESUtils;
+			sourceTree = "<group>";
+		};
+		5EC3FF952088EE1800424AF0 /* TripleDESUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F201EAF8C5400BB13A1 /* TripleDESViewController.h */,
+				5ED82F211EAF8C5400BB13A1 /* TripleDESViewController.m */,
+			);
+			name = TripleDESUtils;
+			sourceTree = "<group>";
+		};
+		5EC3FF962088EE2000424AF0 /* DESUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F171EAF898800BB13A1 /* DESViewController.h */,
+				5ED82F181EAF898800BB13A1 /* DESViewController.m */,
+			);
+			name = DESUtils;
+			sourceTree = "<group>";
+		};
+		5EC3FF972088EE2600424AF0 /* RSAUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82F1D1EAF899F00BB13A1 /* RSAViewController.h */,
+				5ED82F1E1EAF899F00BB13A1 /* RSAViewController.m */,
+			);
+			name = RSAUtils;
+			sourceTree = "<group>";
+		};
+		5EC3FF982088EE5B00424AF0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5ED82EDE1EAF871B00BB13A1 /* AppDelegate.h */,
+				5ED82EDF1EAF871B00BB13A1 /* AppDelegate.m */,
+				5ED82EE11EAF871B00BB13A1 /* ViewController.h */,
+				5ED82EE21EAF871B00BB13A1 /* ViewController.m */,
+				5ED82EE41EAF871B00BB13A1 /* Main.storyboard */,
+				5ED82EE71EAF871B00BB13A1 /* Assets.xcassets */,
+				5ED82EE91EAF871B00BB13A1 /* LaunchScreen.storyboard */,
+				5ED82EEC1EAF871B00BB13A1 /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		5ED82ECF1EAF871A00BB13A1 = {
 			isa = PBXGroup;
 			children = (
@@ -309,16 +428,9 @@
 		5ED82EDA1EAF871A00BB13A1 /* EncryptDecryptDEMO */ = {
 			isa = PBXGroup;
 			children = (
+				5EC3FF982088EE5B00424AF0 /* Other */,
 				5ED82F251EAF8D2900BB13A1 /* EncryptDecryptUtils */,
-				5ED82F241EAF8C8F00BB13A1 /* ViewControlGroup */,
-				5ED82EDE1EAF871B00BB13A1 /* AppDelegate.h */,
-				5ED82EDF1EAF871B00BB13A1 /* AppDelegate.m */,
-				5ED82EE11EAF871B00BB13A1 /* ViewController.h */,
-				5ED82EE21EAF871B00BB13A1 /* ViewController.m */,
-				5ED82EE41EAF871B00BB13A1 /* Main.storyboard */,
-				5ED82EE71EAF871B00BB13A1 /* Assets.xcassets */,
-				5ED82EE91EAF871B00BB13A1 /* LaunchScreen.storyboard */,
-				5ED82EEC1EAF871B00BB13A1 /* Info.plist */,
+				5ED82F241EAF8C8F00BB13A1 /* ViewController */,
 				5ED82EDB1EAF871A00BB13A1 /* Supporting Files */,
 			);
 			path = EncryptDecryptDEMO;
@@ -350,37 +462,29 @@
 			path = EncryptDecryptDEMOUITests;
 			sourceTree = "<group>";
 		};
-		5ED82F241EAF8C8F00BB13A1 /* ViewControlGroup */ = {
+		5ED82F241EAF8C8F00BB13A1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5ED82F0E1EAF894E00BB13A1 /* MD5ViewController.h */,
-				5ED82F0F1EAF894E00BB13A1 /* MD5ViewController.m */,
-				5ED82F111EAF897300BB13A1 /* Base64ViewController.h */,
-				5ED82F121EAF897300BB13A1 /* Base64ViewController.m */,
-				5ED82F141EAF898100BB13A1 /* AESViewController.h */,
-				5ED82F151EAF898100BB13A1 /* AESViewController.m */,
-				5ED82F171EAF898800BB13A1 /* DESViewController.h */,
-				5ED82F181EAF898800BB13A1 /* DESViewController.m */,
-				5ED82F201EAF8C5400BB13A1 /* TripleDESViewController.h */,
-				5ED82F211EAF8C5400BB13A1 /* TripleDESViewController.m */,
-				5ED82F1D1EAF899F00BB13A1 /* RSAViewController.h */,
-				5ED82F1E1EAF899F00BB13A1 /* RSAViewController.m */,
+				5EC3FF972088EE2600424AF0 /* RSAUtils */,
+				5EC3FF962088EE2000424AF0 /* DESUtils */,
+				5EC3FF952088EE1800424AF0 /* TripleDESUtils */,
+				5EC3FF942088EE1000424AF0 /* AESUtils */,
+				5EC3FF932088EE0800424AF0 /* Base64Utils */,
+				5EC3FF922088EDB700424AF0 /* MD5Utils */,
 			);
-			name = ViewControlGroup;
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		5ED82F251EAF8D2900BB13A1 /* EncryptDecryptUtils */ = {
 			isa = PBXGroup;
 			children = (
+				5EC3FF912088ED6200424AF0 /* MD5Utils */,
+				5EC3FF902088ED5600424AF0 /* Base64Utils */,
+				5EC3FF8F2088ED4800424AF0 /* OtherUtils */,
+				5EC3FF8E2088ED1D00424AF0 /* AESUtils */,
+				5EC3FF8D2088ECDF00424AF0 /* TripleDESUtils */,
+				5EC3FF8C2088ECD300424AF0 /* DESUtils */,
 				5E9076061EB1BC5A00D2EF6E /* RSAUtils */,
-				5ED82F261EAF8FBC00BB13A1 /* DESUtils.h */,
-				5ED82F271EAF8FBC00BB13A1 /* DESUtils.m */,
-				5ED82F291EAF8FD600BB13A1 /* Base64Utils.h */,
-				5ED82F2A1EAF8FD600BB13A1 /* Base64Utils.m */,
-				5ED82F321EAF957800BB13A1 /* NSString+MD5.h */,
-				5ED82F331EAF957800BB13A1 /* NSString+MD5.m */,
-				5ED82F351EAF9C5B00BB13A1 /* TripleDESUtils.h */,
-				5ED82F361EAF9C5B00BB13A1 /* TripleDESUtils.m */,
 			);
 			name = EncryptDecryptUtils;
 			sourceTree = "<group>";
