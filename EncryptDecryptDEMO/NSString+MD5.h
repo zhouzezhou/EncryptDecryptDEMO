@@ -10,6 +10,7 @@
 
 @interface NSString(MD5)
 
+// 32位大写 MD5
 - (NSString *)md5Digest;
 
 @end
