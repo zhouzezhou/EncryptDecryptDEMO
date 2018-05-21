@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E9076591EB1BC9000D2EF6E /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9076571EB1BC9000D2EF6E /* libcrypto.a */; };
-		5E90765A1EB1BC9000D2EF6E /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9076581EB1BC9000D2EF6E /* libssl.a */; };
+		5E5BB3C420B272A2004A5D97 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5BB3C220B272A1004A5D97 /* libcrypto.a */; };
+		5E5BB3C520B272A2004A5D97 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5BB3C320B272A2004A5D97 /* libssl.a */; };
 		5E90765D1EB1BC9E00D2EF6E /* HBRSAHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E90765C1EB1BC9E00D2EF6E /* HBRSAHandler.m */; };
 		5ED82EDD1EAF871A00BB13A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED82EDC1EAF871A00BB13A1 /* main.m */; };
 		5ED82EE01EAF871B00BB13A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED82EDF1EAF871B00BB13A1 /* AppDelegate.m */; };
@@ -48,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E5BB3C220B272A1004A5D97 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		5E5BB3C320B272A2004A5D97 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		5E9076081EB1BC7D00D2EF6E /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		5E9076091EB1BC7D00D2EF6E /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
 		5E90760A1EB1BC7D00D2EF6E /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
@@ -123,8 +125,6 @@
 		5E9076521EB1BC7D00D2EF6E /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
 		5E9076531EB1BC7D00D2EF6E /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
 		5E9076541EB1BC7D00D2EF6E /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
-		5E9076571EB1BC9000D2EF6E /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		5E9076581EB1BC9000D2EF6E /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		5E90765B1EB1BC9E00D2EF6E /* HBRSAHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBRSAHandler.h; sourceTree = "<group>"; };
 		5E90765C1EB1BC9E00D2EF6E /* HBRSAHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBRSAHandler.m; sourceTree = "<group>"; };
 		5ED82ED81EAF871A00BB13A1 /* EncryptDecryptDEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptDecryptDEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,8 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E90765A1EB1BC9000D2EF6E /* libssl.a in Frameworks */,
-				5E9076591EB1BC9000D2EF6E /* libcrypto.a in Frameworks */,
+				5E5BB3C520B272A2004A5D97 /* libssl.a in Frameworks */,
+				5E5BB3C420B272A2004A5D97 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,11 +266,11 @@
 		5E6794B520B26E8200A0545B /* RSAUtils */ = {
 			isa = PBXGroup;
 			children = (
+				5E9076071EB1BC7D00D2EF6E /* openssl */,
 				5E90765B1EB1BC9E00D2EF6E /* HBRSAHandler.h */,
 				5E90765C1EB1BC9E00D2EF6E /* HBRSAHandler.m */,
-				5E9076071EB1BC7D00D2EF6E /* openssl */,
-				5E9076571EB1BC9000D2EF6E /* libcrypto.a */,
-				5E9076581EB1BC9000D2EF6E /* libssl.a */,
+				5E5BB3C220B272A1004A5D97 /* libcrypto.a */,
+				5E5BB3C320B272A2004A5D97 /* libssl.a */,
 			);
 			path = RSAUtils;
 			sourceTree = "<group>";
@@ -455,10 +455,10 @@
 		5ED82EDA1EAF871A00BB13A1 /* EncryptDecryptDEMO */ = {
 			isa = PBXGroup;
 			children = (
-				5E6794AE20B26E3100A0545B /* Other */,
 				5E6794AF20B26E4F00A0545B /* EncryptDecryptUtils */,
 				5E6794B620B26EB200A0545B /* ViewController */,
 				5E6794BD20B26F0C00A0545B /* Supporting Files */,
+				5E6794AE20B26E3100A0545B /* Other */,
 			);
 			path = EncryptDecryptDEMO;
 			sourceTree = "<group>";
@@ -781,10 +781,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CB29T9LDGP;
 				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/EncryptDecryptDEMO";
-				INFOPLIST_FILE = EncryptDecryptDEMO/Info.plist;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/EncryptDecryptDEMO/EncryptDecryptUtils/RSAUtils/";
+				INFOPLIST_FILE = "$(SRCROOT)/EncryptDecryptDEMO/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/EncryptDecryptDEMO";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/EncryptDecryptDEMO",
+					"$(PROJECT_DIR)/EncryptDecryptDEMO/EncryptDecryptUtils/RSAUtils",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = zhouzezhou.EncryptDecryptDEMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -796,10 +799,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CB29T9LDGP;
 				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/EncryptDecryptDEMO";
-				INFOPLIST_FILE = EncryptDecryptDEMO/Info.plist;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/EncryptDecryptDEMO/EncryptDecryptUtils/RSAUtils/";
+				INFOPLIST_FILE = "$(SRCROOT)/EncryptDecryptDEMO/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/EncryptDecryptDEMO";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/EncryptDecryptDEMO",
+					"$(PROJECT_DIR)/EncryptDecryptDEMO/EncryptDecryptUtils/RSAUtils",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = zhouzezhou.EncryptDecryptDEMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
