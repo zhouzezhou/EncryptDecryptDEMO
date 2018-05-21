@@ -30,15 +30,10 @@
     [self.view addSubview:displayLabel];
     
     // md5 加密
-    NSString *oriTxt = @"abc123,./";
-    
+    NSString *oriTxt = @"abc123,./你好";
     NSString *encryptTxt = [oriTxt md5Digest];
     
-    
-    
-    [displayLabel setText:[NSString stringWithFormat:@"md5加密:\n明文:abc123,./\n密文:%@", encryptTxt]];
-    
-    
+    [displayLabel setText:[NSString stringWithFormat:@"md5加密:\n明文:%@\n密文:%@", oriTxt, encryptTxt]];
 }
 
 - (void)didReceiveMemoryWarning {
