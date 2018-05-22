@@ -9,6 +9,12 @@
 #import "RSAViewController.h"
 #import "HBRSAHandler.h"
 
+
+// 屏幕的宽度
+#define kScreenWidth [[UIScreen mainScreen] bounds].size.width
+// 屏幕的高度
+#define kScreenHeight [[UIScreen mainScreen] bounds].size.height
+
 @interface RSAViewController ()
 
 @end
@@ -21,9 +27,9 @@
     [super viewDidLoad];
     
     
-    NSString* private_key_string = @"MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBALgv/syFH337KzC29KvR0p6cP+glRqjDYAQno5ifafXZjgf1EhBjZblKv+HiLAzNBOlYU1PnLuOOkZj6pg1A5HUZLpsbYa5Mwr1bUHALjXLaB3THCpZX51/b5L14erGo52Jv/j/63YljEtMm8ALmkY8S+3fPxFeY7ya+2VXMEtplAgMBAAECgYAguvauZWGpQ37zUy+7cLfa061PlYAu8TkYw+qAbqOnupdQtq4VF3S2LqBWhZiKVcxvovB70nM0oNsisjfb1xJBpyfDBFug7d+y2f8yr6aTOezoY5DBYEF3Svg9Kp9ra+vvAYX/7fh+tHCU0HOvp0z8ikZiRSWZaQ+3A2GiCIJrwQJBAPKVji89hGAMEWLJJFZaPiLBqZUwR2W/rp7Ely5ddKfjcosHhggHfOb71BnrMOm0h4S85Gx6a87n9R2To0c51q0CQQDCX6yYdt/9JGORyNSXfzMfSZyVOrMpIo77R0YwKa3UOwwLA56l2Lc4AYO10/lyAyZCKse2/5D9ZZUB7xoYEmGZAkB8MEJVPuoY/bSc3RqENrjetERsAwZaObJcx4oaC3AgTxmhwV1FmQfBfKTODBDDZE+Ijedm/ZlZmHhtBtstKJgVAkBKma/DgHRtUscIT90QHBjB3F3FhJb4pbPcyzksCQMXXmY73/LG0ktXqnUjlyy4zm6jnIm0OZgrOQ6chGkubfeZAkBMCGF2tPfEJh8XODOvlw5ADnUiq+Qe/abcpKowkiT9zP+rYT9XJAx7QxChjdwTZb6ahnJY1+ny1emEHUOs2fm8";
+    NSString* private_key_string = @"MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBALG3J92DoFqE8wUe7mmDa9zHNit1wTPOXJEtJgBTTZX+TOk1aY/aT/K57HnGaWyEt9rjaxveLqcnd/y8D0oqLX5N7FQ1aiF3c67qilpzT4AWVcL81OXvR03+r+bve6MF970kgvfB0d9YBJ/MJ8sabnH1qy46cAxXv5kh3Vbfu0eRAgMBAAECgYEArp5j6nFqP2dBDrgM1NpQQrfvjxZ+RzQummt9WnZ/1rDvy3ozBikhw0NSi3kcn4dszAQHe3N97bqHWGtErr/wv/WIPj9PrJgIrgdJ6mdCQoYpeeA2pcDcp/mcNT6LiOpl2I9TAF5vhIcjRGH5h9bO4bjsmEIfNqMvW3tqmibt3T0CQQDgVbSu1t8jjs9r8xQT/AOdYnBK0Lfkb6LTfhwU9HKIme2Ts2iBzae27SyLkb7Eu6qO1FkmW2b5MQ7YeLC7w3uLAkEAyszehcziQf/XopfK/TqZxiBMG/jn02AKJDmLjaS7tO2w4ubhgCxHN+rkIXJYZFlbUEf5KzhOjTV5p3zy4HPc0wJBAKnGcw12tDy20aeCuQk+yoWLgCw+tUz+Z53jbOE29o8G31POjSLfPzQjXnjp/hPpavTZI/bxaYbhZ7jP7gDLum0CQBN6wDkL6AO85mKIwAe41EJyobziGKp2BCNcn6n4U8taNW5mDOz509FsL4OC7zicWKgKccWT//+STmAnIVEr798CQQDeW940PxBWJm+GqMb0BVhELvULu6Ai8nH1HW9tnm7IL7P67C4JQaRbPsOqZsQZcTXRCutuaDHmCEaZhEm9YR0X";
     
-    NSString* public_key_string = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC4L/7MhR99+yswtvSr0dKenD/oJUaow2AEJ6OYn2n12Y4H9RIQY2W5Sr/h4iwMzQTpWFNT5y7jjpGY+qYNQOR1GS6bG2GuTMK9W1BwC41y2gd0xwqWV+df2+S9eHqxqOdib/4/+t2JYxLTJvAC5pGPEvt3z8RXmO8mvtlVzBLaZQIDAQAB";
+    NSString* public_key_string = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCxtyfdg6BahPMFHu5pg2vcxzYrdcEzzlyRLSYAU02V/kzpNWmP2k/yuex5xmlshLfa42sb3i6nJ3f8vA9KKi1+TexUNWohd3Ou6opac0+AFlXC/NTl70dN/q/m73ujBfe9JIL3wdHfWASfzCfLGm5x9asuOnAMV7+ZId1W37tHkQIDAQAB";
     
     
     
@@ -33,16 +39,22 @@
     _handler = handler;
     
     //需要签名的字符串
-    NSString *plainText = @"zhouzezhou";
+    NSString *plainText = @"abc123,./你好";
     
-    NSString* enPrivateString = [handler encryptWithPrivateKey:plainText];
-    NSLog(@"\n\nenPrivateString:\n %@",enPrivateString);
+    NSString* enPrivateString = [handler encryptWithPrivateKey_supportLongCN:plainText];
+//    NSLog(@"\n\nenPrivateString:\n %@",enPrivateString);
     
-    NSString *tempString = @"RH+imgTWqNxXIMWXfHUzvAX45eQyfTgvPHJ4eo8ZMZLORIl+CPe7yQayPTkAbIGfujDTRWWDyfCV2wg/YitGmOOYcsm+BwWGIQUbcpomc5onFOPYi+0PPRBGssqHqWfW0/SAo5POVDK8eXy0mI9CsFn/KXNFeNX+27D1NeliRjAfjWn9KgzECEhXtAqFPMFCkkm36LvxRIhyhVS+ZHEDgPKBbU+6HsAcGknbKjTkhkjMAjlfCPhV4bEXlO7xYjzFUvcfi1uET45YjVKg/L38jdZCWGiryuN3RbDmUIePl+yiCmmXNl0uPrph58vfn2LmVLe+DgP3uVfMmoPI7iYz19/OykuozAihsZQCHeBj9BLvtAC9wPxbQd6j3DukCuVEpYq6SFTQrw2/0pCP/DdKkfO1IdsQBN+3KV9LqedUWNDUkxfn6PxLfPfcipGav1HA6/zldK+B8Ep9hI2pvkaX4RD5xSQO4i+hlixM3eU8UTD6+HdoDGrhJXGqRh8lx9L+5+rhVJPjTUKY2+RepZqNa7laqwbi5tdrqYMHcb/TKvA6KAdsWncUzdT7fZ1C0jyae38R7eHXzJzujvgzwm/x+7QXtSFwn6fP+Rq6lR62z1zb3N18GwW3o+PnyFAK/DUm38gXOuWo5zZsqhz4os8AopFwsDWuvOlOwM5AW2RiXDI=";
+    NSString* dePublicStringtemp = [handler decryptWithPublicKey:enPrivateString];
+//    NSLog(@"\n\ndePublicString:\n%@",dePublicStringtemp);
     
     
-    NSString* dePublicStringtemp = [handler decryptWithPublicKey:tempString];
-    NSLog(@"\n\ndePublicString:\n%@",dePublicStringtemp);
+    UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 4, kScreenWidth - 20, kScreenHeight / 2)];
+    [displayLabel setBackgroundColor:[UIColor greenColor]];
+    [displayLabel setNumberOfLines:0];
+    [self.view addSubview:displayLabel];
+    
+    [displayLabel setText:[NSString stringWithFormat:@"RSA加解密:\n明文:%@\n密文:%@\n----------\n解密:%@", plainText, enPrivateString, dePublicStringtemp]];
+    
 }
 
 - (IBAction)clickButotn:(id)sender
