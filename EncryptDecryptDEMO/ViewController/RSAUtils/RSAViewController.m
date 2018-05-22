@@ -40,7 +40,15 @@
     
     //需要签名的字符串
     NSString *plainText = @"abc123,./你好";
+    NSString *displayStr = @"";
     
+    // 签名 和 验证签名
+    NSString *signMD5 = [handler signMD5String:plainText];
+    BOOL isRightSignMD5 = [handler verifyMD5String:plainText withSign:signMD5];
+    
+    displayStr = [NSString stringWithFormat:@"RSA签名和验证签名:\n明文:%@\n签名结果:\n%@\n验证:%@\n----------\n", plainText, signMD5, isRightSignMD5?@"TRUE":@"FALSE"];
+    
+    // 加解密
     NSString* enPrivateString = [handler encryptWithPrivateKey_supportLongCN:plainText];
 //    NSLog(@"\n\nenPrivateString:\n %@",enPrivateString);
     
@@ -48,12 +56,12 @@
 //    NSLog(@"\n\ndePublicString:\n%@",dePublicStringtemp);
     
     
-    UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 4, kScreenWidth - 20, kScreenHeight / 2)];
+    UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 10, kScreenWidth - 20, kScreenHeight * 4 / 5)];
     [displayLabel setBackgroundColor:[UIColor greenColor]];
     [displayLabel setNumberOfLines:0];
     [self.view addSubview:displayLabel];
     
-    [displayLabel setText:[NSString stringWithFormat:@"RSA加解密:\n明文:%@\n密文:%@\n----------\n解密:%@", plainText, enPrivateString, dePublicStringtemp]];
+    [displayLabel setText:[NSString stringWithFormat:@"%@\nRSA加解密:\n明文:%@\n密文:\n%@\n解密:%@", displayStr, plainText, enPrivateString, dePublicStringtemp]];
     
 }
 
