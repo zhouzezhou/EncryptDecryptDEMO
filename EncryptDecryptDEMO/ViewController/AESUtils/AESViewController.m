@@ -7,6 +7,7 @@
 //
 
 #import "AESViewController.h"
+#import "AESUtils.h"
 
 // 屏幕的宽度
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
@@ -26,13 +27,30 @@
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
+    // 待加密字符串
+    NSString *oriTxt = @"abc123,./你好";
+    NSString *key = @"12345678";
+    
+    NSString *AESEncyptStr = [AESUtils AESEncryptStringByString:oriTxt andKey:key];
+    NSData *AESEncyptData = [AESUtils AESEncryptDataByString:oriTxt andKey:key];
+    
+    
+    // 先把字符串转换为二进制数据
+//    NSData *d = [AESEncyptStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *AESDecryptStr = [AESUtils ZzzAESDecryptDataByString:AESEncyptData andKey:key];
+    
+    
     UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 10, kScreenWidth - 20, kScreenHeight * 4 / 5)];
     [displayLabel setBackgroundColor:[UIColor greenColor]];
     [displayLabel setNumberOfLines:0];
     [self.view addSubview:displayLabel];
     
-    [displayLabel setText:@"zzz"];
-//    [displayLabel setText:[NSString stringWithFormat:@"%@\nAES加解密:\n明文:%@\n密文:\n%@\n解密:%@", displayStr, plainText, enPrivateString, dePublicStringtemp]];
+    [displayLabel setText:[NSString stringWithFormat:@"%@\nAES加解密:\n明文:%@\n密钥:%@\n密文:\n%@\n解密:%@",
+                           @"AES加解密",
+                           oriTxt,
+                           key,
+                           AESEncyptStr,
+                           AESDecryptStr]];
     
     
 }
