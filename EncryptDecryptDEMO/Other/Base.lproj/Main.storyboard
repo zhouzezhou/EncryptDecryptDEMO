@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="USa-AT-M4J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="USa-AT-M4J">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeO-iR-CPe">
-                                <rect key="frame" x="37" y="146" width="302" height="30"/>
+                                <rect key="frame" x="36" y="146" width="303" height="30"/>
                                 <state key="normal" title="MD5"/>
                                 <connections>
                                     <segue destination="nq3-2p-90Y" kind="show" id="gDQ-nJ-Qmk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mN-P7-REI">
-                                <rect key="frame" x="35" y="206" width="304" height="30"/>
+                                <rect key="frame" x="36" y="206" width="303" height="30"/>
                                 <state key="normal" title="Base64"/>
                                 <connections>
                                     <segue destination="VVf-l6-89I" kind="show" id="YnY-Hu-tx2"/>
@@ -39,10 +38,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEI-V0-tlj">
                                 <rect key="frame" x="36" y="266" width="303" height="30"/>
                                 <state key="normal" title="AES"/>
+                                <connections>
+                                    <action selector="AESBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9iQ-Jy-pMi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayi-gY-Q7v">
                                 <rect key="frame" x="36" y="326" width="303" height="30"/>
                                 <state key="normal" title="DES"/>
+                                <connections>
+                                    <action selector="DESBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIB-wU-EDg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-0w-8fl">
                                 <rect key="frame" x="56" y="462" width="265" height="30"/>

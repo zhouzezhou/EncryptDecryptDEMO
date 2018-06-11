@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "AESViewController.h"
 
 @interface ViewController ()
 
@@ -32,5 +32,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)AESBtnClick:(UIButton *)sender
+{
+    AESViewController *AESvc = [[AESViewController alloc] init];
+    [self.navigationController pushViewController:AESvc animated:YES];
+    
+    
+}
+
+- (IBAction)DESBtnClick:(UIButton *)sender
+{
+    
+}
 
 @end
