@@ -11,6 +11,12 @@
 #import "Base64Utils.h"
 #import <Foundation/NSScanner.h>
 
+// 屏幕的宽度
+#define kScreenWidth [[UIScreen mainScreen] bounds].size.width
+// 屏幕的高度
+#define kScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+
 @interface TripleDESViewController ()
 
 @end
@@ -22,22 +28,49 @@
     self.title = @"3DES加解密";
     
     // 二维码16进制字符串加解密
-//    NSString *plainText = @"1CB77A269D9C2DE70819A71998466FFB";
-    NSString *plainText = @"2471905179304";
+    NSString *plainText = @"abc123,./你好";
     NSString *key       = @"ABCDEFGHIJKLMNOPQRSTUVWX";
     NSString *iv        = @"88888888";
     
+    
+    NSString *encryptString = [TripleDESUtils getEncryptWithString:plainText keyString: key ivString: iv];
+    NSString *decryptString = [TripleDESUtils getDecryptWithString:encryptString keyString: key ivString: iv];
+    
+    UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 10, kScreenWidth - 20, kScreenHeight * 4 / 5)];
+    [displayLabel setBackgroundColor:[UIColor greenColor]];
+    [displayLabel setNumberOfLines:0];
+    [self.view addSubview:displayLabel];
+    
+    [displayLabel setText:[NSString stringWithFormat:@"3DES加解密:\n明文:%@\n密钥:%@\n偏移量iv:%@\n密文:\n%@\n解密:\n%@",
+                           plainText,
+                           key,
+                           iv,
+                           encryptString,
+                           decryptString]];
+
+
+
     NSString *encryptString2HexString = [TripleDESUtils getHexEncryptWithString:plainText keyString: key ivString: iv];
     NSLog(@"3des加密后输出16进行的字符串:%@",encryptString2HexString);
     
     NSString *decryptHexString2String = [TripleDESUtils getDecryptWithHexString:encryptString2HexString keyString: key ivString: iv];
     NSLog(@"3des解密16进行的字符串为明文:%@",decryptHexString2String);
+    
+    
+    [displayLabel setText:[NSString stringWithFormat:@"%@\n\n----- 特殊用法 ------\n输出16进制密文:\n%@\n16进制密文解密:\n%@",
+                           displayLabel.text,
+                           encryptString2HexString,
+                           decryptHexString2String]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
 
 //普通字符串转换为十六进制的。
 - (NSString *)hexStringFromString:(NSString *)string{

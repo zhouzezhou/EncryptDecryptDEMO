@@ -21,6 +21,8 @@
 // 解密
 + (NSString *)ZzzAESDecryptDataByString:(NSData *)data andKey:(NSString *)key;
 
++ (NSString *)ZzzAESDecryptStringByString:(NSString *)str andKey:(NSString *)key;
+
 // ------------- 特殊用法 -------------
 
 /**

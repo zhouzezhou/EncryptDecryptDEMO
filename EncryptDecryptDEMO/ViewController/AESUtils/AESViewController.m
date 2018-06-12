@@ -32,12 +32,11 @@
     NSString *key = @"12345678";
     
     NSString *AESEncyptStr = [AESUtils AESEncryptStringByString:oriTxt andKey:key];
-    NSData *AESEncyptData = [AESUtils AESEncryptDataByString:oriTxt andKey:key];
+//    NSData *AESEncyptData = [AESUtils AESEncryptDataByString:oriTxt andKey:key];
     
+//    NSData *AESEncyptData = [[NSData alloc]initWithBase64EncodedString:AESEncyptStr options:0];
     
-    // 先把字符串转换为二进制数据
-//    NSData *d = [AESEncyptStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *AESDecryptStr = [AESUtils ZzzAESDecryptDataByString:AESEncyptData andKey:key];
+    NSString *AESDecryptStr = [AESUtils ZzzAESDecryptStringByString:AESEncyptStr andKey:key];
     
     
     UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 10, kScreenWidth - 20, kScreenHeight * 4 / 5)];
@@ -45,8 +44,7 @@
     [displayLabel setNumberOfLines:0];
     [self.view addSubview:displayLabel];
     
-    [displayLabel setText:[NSString stringWithFormat:@"%@\nAES加解密:\n明文:%@\n密钥:%@\n密文:\n%@\n解密:%@",
-                           @"AES加解密",
+    [displayLabel setText:[NSString stringWithFormat:@"AES加解密:\n明文:%@\n密钥:%@\n密文:\n%@\n解密:%@",
                            oriTxt,
                            key,
                            AESEncyptStr,

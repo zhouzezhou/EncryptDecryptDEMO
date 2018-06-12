@@ -107,6 +107,11 @@
     return nil;
 }
 
++ (NSString *)ZzzAESDecryptStringByString:(NSString *)str andKey:(NSString *)key
+{
+    NSData *AESEncyptData = [[NSData alloc]initWithBase64EncodedString:str options:0];
+    return [self ZzzAESDecryptDataByString:AESEncyptData andKey:key];
+}
 
 
 
