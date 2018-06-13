@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AESViewController.h"
+#import "DESViewController.h"
 
 @interface ViewController ()
 
@@ -36,13 +37,12 @@
 {
     AESViewController *AESvc = [[AESViewController alloc] init];
     [self.navigationController pushViewController:AESvc animated:YES];
-    
-    
 }
 
 - (IBAction)DESBtnClick:(UIButton *)sender
 {
-    
+    DESViewController *DESvc = [[DESViewController alloc] init];
+    [self.navigationController pushViewController:DESvc animated:YES];
 }
 
 @end
