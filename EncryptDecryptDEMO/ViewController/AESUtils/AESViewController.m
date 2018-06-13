@@ -39,7 +39,7 @@
     NSString *AESDecryptStr = [AESUtils ZzzAESDecryptStringByString:AESEncyptStr andKey:key];
     
     
-    UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 10, kScreenWidth - 20, kScreenHeight * 4 / 5)];
+    UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 4, kScreenWidth - 20, kScreenHeight / 2)];
     [displayLabel setBackgroundColor:[UIColor greenColor]];
     [displayLabel setNumberOfLines:0];
     [self.view addSubview:displayLabel];
