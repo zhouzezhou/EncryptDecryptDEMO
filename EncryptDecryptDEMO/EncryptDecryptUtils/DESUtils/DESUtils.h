@@ -22,6 +22,9 @@
  **********************************************************/
 + (NSData *)DESEncrypt:(NSData *)data WithKey:(NSString *)key;
 
+// 加密输入输出String
++ (NSString *)DESEncryptByString:(NSString *)str WithKey:(NSString *)key;
+
 /************************************************************
  函数名称 : + (NSData *)DESEncrypt:(NSData *)data WithKey:(NSString *)key
  函数描述 : 文本数据进行DES解密
@@ -33,6 +36,9 @@
  备注信息 : 此函数不可用于过长文本
  **********************************************************/
 + (NSData *)DESDecrypt:(NSData *)data WithKey:(NSString *)key;
+
+// 解密输入输出String
++ (NSString *)DESDecryptByString:(NSString *)str WithKey:(NSString *)key;
 
 /************************************************************
  函数名称 : + (NSData *)DESEncryptNoPadding:(NSData *)data WithKey:(NSData *)key

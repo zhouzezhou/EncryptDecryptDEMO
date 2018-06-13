@@ -30,14 +30,8 @@
     NSString *oriTxt = @"abc123,./你好";
     NSString *key = @"12345678";
     
-    
-    // 先把字符串转换为二进制数据
-    NSData *d = [oriTxt dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *encryptData  = [DESUtils DESEncrypt:d WithKey:key];
-    NSString *encryptStr = [encryptData base64EncodedStringWithOptions:0];
-    
-    NSData *desDecryptData = [DESUtils DESDecrypt:encryptData WithKey:key];
-    NSString *desDecryptStr = [[NSString alloc] initWithData:desDecryptData encoding:NSUTF8StringEncoding];
+    NSString *encryptStr = [DESUtils DESEncryptByString:oriTxt WithKey:key];
+    NSString *desDecryptStr = [DESUtils DESDecryptByString:encryptStr WithKey:key];
     
     UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kScreenHeight / 4, kScreenWidth - 20, kScreenHeight / 2)];
     [displayLabel setBackgroundColor:[UIColor greenColor]];
