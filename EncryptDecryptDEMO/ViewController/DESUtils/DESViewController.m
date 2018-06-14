@@ -38,7 +38,7 @@
     [displayLabel setNumberOfLines:0];
     [self.view addSubview:displayLabel];
     
-    [displayLabel setText:[NSString stringWithFormat:@"DES加解密:\n明文:%@\n密钥:%@\n密文:\n%@\n解密:%@",
+    [displayLabel setText:[NSString stringWithFormat:@"DES加解密:\n明文:%@\n密钥:%@\n密文:\n%@\n----------\n解密:%@",
                            oriTxt,
                            key,
                            encryptStr,

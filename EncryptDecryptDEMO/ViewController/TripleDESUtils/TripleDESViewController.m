@@ -41,7 +41,7 @@
     [displayLabel setNumberOfLines:0];
     [self.view addSubview:displayLabel];
     
-    [displayLabel setText:[NSString stringWithFormat:@"3DES加解密:\n明文:%@\n密钥:%@\n偏移量iv:%@\n密文:\n%@\n解密:\n%@",
+    [displayLabel setText:[NSString stringWithFormat:@"3DES加解密:\n明文:%@\n密钥:%@\n偏移量iv:%@\n密文:\n%@\n----------\n解密:\n%@",
                            plainText,
                            key,
                            iv,
