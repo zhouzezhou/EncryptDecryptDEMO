@@ -49,8 +49,8 @@
                                     <action selector="DESBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIB-wU-EDg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-0w-8fl">
-                                <rect key="frame" x="56" y="462" width="265" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-0w-8fl">
+                                <rect key="frame" x="36" y="446" width="303" height="30"/>
                                 <state key="normal" title="RSA签名和验签"/>
                                 <connections>
                                     <segue destination="Vn9-2F-pdx" kind="show" id="7Ho-6c-nak"/>
@@ -63,6 +63,13 @@
                                     <segue destination="qEh-ko-Hs7" kind="show" id="VnM-4G-nzH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mi-WZ-ACb">
+                                <rect key="frame" x="164" y="532" width="46" height="18"/>
+                                <state key="normal" title="SHA"/>
+                                <connections>
+                                    <action selector="SHABtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0u-iJ-Dvi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -70,6 +77,7 @@
                             <constraint firstItem="fEI-V0-tlj" firstAttribute="top" secondItem="1mN-P7-REI" secondAttribute="bottom" constant="30" id="5zd-DR-VWD"/>
                             <constraint firstItem="oeO-iR-CPe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="9ix-QL-gfN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Riw-Lt-wpc" secondAttribute="trailing" constant="20" id="AKt-YF-xQW"/>
+                            <constraint firstItem="2Mi-WZ-ACb" firstAttribute="top" secondItem="Pps-0w-8fl" secondAttribute="bottom" constant="34" id="Caz-eb-oSI"/>
                             <constraint firstItem="1mN-P7-REI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EvR-TX-wXn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oeO-iR-CPe" secondAttribute="trailing" constant="20" id="GSe-le-LwQ"/>
                             <constraint firstItem="Ayi-gY-Q7v" firstAttribute="top" secondItem="fEI-V0-tlj" secondAttribute="bottom" constant="30" id="HLP-rX-vRK"/>
@@ -84,6 +92,7 @@
                             <constraint firstItem="fEI-V0-tlj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePO-GD-nJc"/>
                             <constraint firstItem="oeO-iR-CPe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqP-Vb-mLr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pps-0w-8fl" secondAttribute="trailing" constant="20" id="kmo-fT-plt"/>
+                            <constraint firstItem="2Mi-WZ-ACb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xT8-Wf-eSn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ObjC加解密DEMO" id="wTG-Qc-gri"/>

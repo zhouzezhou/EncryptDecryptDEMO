@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AESViewController.h"
 #import "DESViewController.h"
+#import "SHAViewController.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,7 @@
     UIBarButtonItem * backButtonItem = [[UIBarButtonItem alloc] init];
     backButtonItem.title = @"Home";
     self.navigationItem.backBarButtonItem = backButtonItem;
+    
     
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -44,5 +46,13 @@
     DESViewController *DESvc = [[DESViewController alloc] init];
     [self.navigationController pushViewController:DESvc animated:YES];
 }
+
+- (IBAction)SHABtnClick:(UIButton *)sender
+{
+    SHAViewController *SHAvc = [[SHAViewController alloc] init];
+    [self.navigationController pushViewController:SHAvc animated:YES];
+    
+}
+
 
 @end

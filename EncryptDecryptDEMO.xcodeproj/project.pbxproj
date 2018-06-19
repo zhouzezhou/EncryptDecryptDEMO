@@ -11,6 +11,8 @@
 		5E5BB3C520B272A2004A5D97 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5BB3C320B272A2004A5D97 /* libssl.a */; };
 		5E90765D1EB1BC9E00D2EF6E /* HBRSAHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E90765C1EB1BC9E00D2EF6E /* HBRSAHandler.m */; };
 		5E99DAC720CE3F7B007375A9 /* AESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E99DAC520CE3F77007375A9 /* AESUtils.m */; };
+		5EB8E2A920D938160004F0C5 /* SHAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E2A820D938160004F0C5 /* SHAViewController.m */; };
+		5EB8E2AD20D938500004F0C5 /* NSString+SHA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E2AC20D938500004F0C5 /* NSString+SHA.m */; };
 		5ED82EDD1EAF871A00BB13A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED82EDC1EAF871A00BB13A1 /* main.m */; };
 		5ED82EE01EAF871B00BB13A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED82EDF1EAF871B00BB13A1 /* AppDelegate.m */; };
 		5ED82EE31EAF871B00BB13A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED82EE21EAF871B00BB13A1 /* ViewController.m */; };
@@ -130,6 +132,10 @@
 		5E90765C1EB1BC9E00D2EF6E /* HBRSAHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBRSAHandler.m; sourceTree = "<group>"; };
 		5E99DAC520CE3F77007375A9 /* AESUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESUtils.m; sourceTree = "<group>"; };
 		5E99DAC620CE3F7A007375A9 /* AESUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESUtils.h; sourceTree = "<group>"; };
+		5EB8E2A720D938160004F0C5 /* SHAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAViewController.h; sourceTree = "<group>"; };
+		5EB8E2A820D938160004F0C5 /* SHAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHAViewController.m; sourceTree = "<group>"; };
+		5EB8E2AB20D938500004F0C5 /* NSString+SHA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SHA.h"; sourceTree = "<group>"; };
+		5EB8E2AC20D938500004F0C5 /* NSString+SHA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHA.m"; sourceTree = "<group>"; };
 		5ED82ED81EAF871A00BB13A1 /* EncryptDecryptDEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncryptDecryptDEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED82EDC1EAF871A00BB13A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5ED82EDE1EAF871B00BB13A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -213,6 +219,7 @@
 		5E6794AF20B26E4F00A0545B /* EncryptDecryptUtils */ = {
 			isa = PBXGroup;
 			children = (
+				5EB8E2AA20D938350004F0C5 /* SHA */,
 				5E6794B520B26E8200A0545B /* RSAUtils */,
 				5E6794B420B26E7E00A0545B /* DESUtils */,
 				5E6794B320B26E7900A0545B /* TripleDESUtils */,
@@ -283,6 +290,7 @@
 		5E6794B620B26EB200A0545B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5EB8E2A620D937FF0004F0C5 /* SHA */,
 				5E6794BC20B26EE800A0545B /* RSAUtils */,
 				5E6794BB20B26EE300A0545B /* DESUtils */,
 				5E6794BA20B26ED800A0545B /* TripleDESUtils */,
@@ -435,6 +443,24 @@
 				5E9076541EB1BC7D00D2EF6E /* x509v3.h */,
 			);
 			path = openssl;
+			sourceTree = "<group>";
+		};
+		5EB8E2A620D937FF0004F0C5 /* SHA */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E2A720D938160004F0C5 /* SHAViewController.h */,
+				5EB8E2A820D938160004F0C5 /* SHAViewController.m */,
+			);
+			path = SHA;
+			sourceTree = "<group>";
+		};
+		5EB8E2AA20D938350004F0C5 /* SHA */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E2AB20D938500004F0C5 /* NSString+SHA.h */,
+				5EB8E2AC20D938500004F0C5 /* NSString+SHA.m */,
+			);
+			path = SHA;
 			sourceTree = "<group>";
 		};
 		5ED82ECF1EAF871A00BB13A1 = {
@@ -625,12 +651,14 @@
 				5ED82EE31EAF871B00BB13A1 /* ViewController.m in Sources */,
 				5ED82EE01EAF871B00BB13A1 /* AppDelegate.m in Sources */,
 				5ED82F281EAF8FBC00BB13A1 /* DESUtils.m in Sources */,
+				5EB8E2AD20D938500004F0C5 /* NSString+SHA.m in Sources */,
 				5ED82F161EAF898100BB13A1 /* AESViewController.m in Sources */,
 				5E90765D1EB1BC9E00D2EF6E /* HBRSAHandler.m in Sources */,
 				5ED82F2B1EAF8FD600BB13A1 /* Base64Utils.m in Sources */,
 				5ED82F1F1EAF899F00BB13A1 /* RSAViewController.m in Sources */,
 				5E99DAC720CE3F7B007375A9 /* AESUtils.m in Sources */,
 				5ED82F341EAF957800BB13A1 /* NSString+MD5.m in Sources */,
+				5EB8E2A920D938160004F0C5 /* SHAViewController.m in Sources */,
 				5ED82EDD1EAF871A00BB13A1 /* main.m in Sources */,
 				5ED82F191EAF898800BB13A1 /* DESViewController.m in Sources */,
 				5ED82F131EAF897300BB13A1 /* Base64ViewController.m in Sources */,
