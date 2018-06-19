@@ -50,7 +50,7 @@
     [displayLabel setNumberOfLines:0];
     [self.view addSubview:displayLabel];
     
-    [displayLabel setText:[NSString stringWithFormat:@"SHA加解密:\n明文:%@\nSHA1密文:%@\nsha224密文:%@\nsha256密文:%@\nsha384密文:%@\nsha512密文:%@\n",
+    [displayLabel setText:[NSString stringWithFormat:@"SHA加解密\n明文:\n%@\nSHA1密文:\n%@\nsha224密文:\n%@\nsha256密文:\n%@\nsha384密文:\n%@\nsha512密文:\n%@\n",
                            plainText,
                            sha1Str,
                            sha224Str,
